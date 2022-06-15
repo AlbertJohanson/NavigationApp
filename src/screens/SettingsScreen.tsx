@@ -11,7 +11,7 @@ export const SettingsScreen = ({navigation}: Props) => {
         <Text style={styles.title}>Settings</Text>
         <Button 
         onPress={() => navigation.goBack()}
-        title='Go back to stack'
+        title='Go back to Tabs'
         />
     </View>
   )

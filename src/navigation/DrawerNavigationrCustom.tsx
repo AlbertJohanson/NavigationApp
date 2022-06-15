@@ -5,6 +5,7 @@ import { StackNavigator } from './StackNavigator';
 import { useWindowDimensions } from 'react-native';
 import DrawerComponent from '../components/DrawerComponent';
 import { createStackNavigator } from '@react-navigation/stack';
+import { Tabs } from './BottomTabNavigations';
 
 
 type Props={}
@@ -30,10 +31,11 @@ export const  DrawerNavigationrCustom = (props: Props) => {
     <Drawer.Navigator
       screenOptions={{
         drawerType: width >= 768 ? 'permanent' : 'front',
+        headerShown: false,
       }}
       drawerContent={(props) => <DrawerComponent {...props}/>}
     >
-      <Drawer.Screen name="StackNavigator" options={{title: 'Stack Navigation'}}  component={StackNavigator} />
+      <Drawer.Screen name="BottomTabNavigations"  component={Tabs} />
       <Drawer.Screen name="SettingsScreen"   component={SettingsStackScreen} />
     </Drawer.Navigator>
   );

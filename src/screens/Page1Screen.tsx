@@ -1,8 +1,9 @@
 import { DrawerScreenProps } from '@react-navigation/drawer';
 import {StackScreenProps} from '@react-navigation/stack';
+import Icon from 'react-native-vector-icons/Ionicons';
 import React, { useEffect } from 'react';
 import {Button, Text, View, TouchableOpacity} from 'react-native';
-import {styles} from '../theme/appTheme';
+import {colors, styles} from '../theme/appTheme';
 
 interface Props extends DrawerScreenProps<any, any> {}
 
@@ -45,6 +46,7 @@ const Page1Screen = ({navigation}: any) => {
               name: 'Pedro',
             })
           }>
+          <Icon name="body" size={30} color={colors.primary}/>
           <Text style={styles.bigBtnText}>Pedro </Text>
         </TouchableOpacity>
 
@@ -56,6 +58,7 @@ const Page1Screen = ({navigation}: any) => {
               name: 'Albert',
             })
           }>
+            <Icon name="body" size={30} color={colors.primary}/>
           <Text style={styles.bigBtnText}>Albert </Text>
         </TouchableOpacity>
       </View>
